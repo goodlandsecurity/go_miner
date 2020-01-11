@@ -31,7 +31,7 @@ $ docker exec -it mssql /opt/mssql-tools/bin/sqlcmd -S localhost \
 > INSERT INTO transactions(ccnum, date, amount, cvv, exp) VALUES('4444123456789012', '2019-01-07', 2400.18, '5544', '2021-02-01');
 > INSERT INTO transactions(ccnum, date, amount, cvv, exp) VALUES('4465122334455667', '2019-01-29', 1450.87, '9876', '2020-06-01');
 > GO
-
+```
 ### Example Use:  
   - *go_miner -host localhost -user sa -password P@$$w0rd!*
   - *go_miner -host 10.0.0.1 -port 1234 -user sa -password P@$$w0rd!*
