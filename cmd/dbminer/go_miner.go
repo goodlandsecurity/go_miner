@@ -7,7 +7,7 @@ import (
 	"log"
 
 	_ "github.com/denisenkom/go-mssqldb"
-	"github.com/goodlandsecurity/go_dbminer/dbminer"
+	"github.com/goodlandsecurity/go_miner/dbminer"
 )
 
 var (
@@ -40,12 +40,11 @@ func (m *MSSQLMiner) connect() error {
 		fmt.Printf(" user:%s\n", *user)
 		fmt.Printf(" password:%s\n", *password)
 	}
-	connString := fmt.Sprintf("server=%s;user id=%s;password=%v;port=%d;database=%s;",
+	connString := fmt.Sprintf("server=%s;user id=%s;password=%v;port=%d;",
 		*server,
 		*user,
 		*password,
-		*port,
-		*database)
+		*port)
 	if *debug {
 		fmt.Printf(" connString:%s\n", connString)
 	}
